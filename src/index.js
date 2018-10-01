@@ -1,14 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import env from '@env';
-
-const App = () =>
-    console.log({env}) ||   // add
-    (
-        <div>
-            <h1>Hello, worlds!</h1>
-        </div>
-    );
+import App from './app';
 
 ReactDOM.render(<App />, document.getElementById("root"));
