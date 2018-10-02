@@ -1,6 +1,9 @@
 import React, { Component } from "react";
-import TodoList from './todo-list';
-import TodoAdder from './todo-adder';
+import { Route } from 'react-router-dom'; 
+
+import TodoList from './shared/todo-list';
+import TodoAdder from './shared/todo-adder';
+import TodoView from './todo-view';
 
 class ToDoApp extends Component {
 
@@ -23,7 +26,8 @@ class ToDoApp extends Component {
                         <TodoList />
                     </div>
                 </div>
-
+                
+                <Route path="/todo/:id" component={TodoView}/>
             </div>
         );
     }
